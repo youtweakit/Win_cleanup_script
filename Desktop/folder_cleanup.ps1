@@ -1,5 +1,5 @@
 # Скрипт (https://github.com/winadm/posh/blob/master/Desktop/CleanupUserProfile.ps1) изменен для удаления файлов в папке Windows\Temp
-
+# Script for deleting files in some Windows folders. Script has NO -whatIf be carefull to use in production without testing
 
 $Logfile = "$env:USERPROFILE\cleanup_script.log"
 $OldFilesData = (get-date).adddays(-14)
@@ -10,7 +10,7 @@ $OldFilesData = (get-date).adddays(-14)
   'AppData\Local\Microsoft\Windows\AppCache',
   'AppData\Local\CrashDumps'
   )
-# Каталоги, в папке Windows(!!!) ВНИМАТЕЛЬНО ТУДА ДОБАВЛЯЕМ ИЛИ НЕ ДОБАВЛЯЕМ.
+# Каталоги, в папке Windows(!!!) 
   [array] $clear_Win_paths = (
     'Temp'
 	
